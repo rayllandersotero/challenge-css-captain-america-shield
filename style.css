@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	background: radial-gradient(circle, black, #222, black);
+}
+
+div {
+	display: flex;
+	margin: auto;
+	background: linear-gradient(to right, var(--c1), var(--c2), var(--c1));
+	border: 1vh solid #444;
+	border-radius: 50%;
+}
+
+#a {
+	width: 98vh;
+	height: 98vh;
+	--c1: red;
+	--c2: darkred;
+}
+
+#a:hover {
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+	transition-duration: 2s;
+	-webkit-transition-duration: 2s;
+	-moz-transition-duration: 2s;
+}
+
+#b {
+	width: 78vh;
+	height: 78vh;
+	--c1: white;
+	--c2: #f7f7f7;
+}
+
+#c {
+	width: 58vh;
+	height: 58vh;
+	--c1: red;
+	--c2: darkred;
+}
+
+#d {
+	width: 38vh;
+	height: 38vh;
+	--c1: blue;
+	--c2: darkblue;
+}
+
+star {
+	margin: auto;
+	border-left: 18vh solid transparent;
+	border-right: 18vh solid transparent;
+	border-bottom: 12vh solid white;
+	transform: rotate(180DEG);
+}
+
+star::before {
+	position: absolute;
+	border-left: 18vh solid transparent;
+	border-right: 18vh solid transparent;
+	border-bottom: 12vh solid white;
+	transform: rotate(71.5DEG);
+	content: "";
+	left: -18vh;
+}
+
+star::after {
+	position: absolute;
+	border-left: 18vh solid transparent;
+	border-right: 18vh solid transparent;
+	border-bottom: 12vh solid white;
+	transform: rotate(-71.5DEG);
+	content: "";
+	left: -18vh;
+}
+
+@media (max-width: 672px) {
+	body {
+		height: 100vh;
+		display: flex;
+	}
+
+	div {
+		border: 1vw solid #444;
+	}
+
+	#a {
+		width: 98vw;
+		height: 98vw;
+	}
+
+	#b {
+		width: 78vw;
+		height: 78vw;
+	}
+
+	#c {
+		width: 58vw;
+		height: 58vw;
+	}
+
+	#d {
+		width: 38vw;
+		height: 38vw;
+	}
+
+	star {
+		border-left: 18vw solid transparent;
+		border-right: 18vw solid transparent;
+		border-bottom: 12vw solid white;
+	}
+
+	star::before {
+		border-left: 18vw solid transparent;
+		border-right: 18vw solid transparent;
+		border-bottom: 12vw solid white;
+		left: -18vw;
+	}
+
+	star::after {
+		border-left: 18vw solid transparent;
+		border-right: 18vw solid transparent;
+		border-bottom: 12vw solid white;
+		left: -18vw;
+	}
+}
