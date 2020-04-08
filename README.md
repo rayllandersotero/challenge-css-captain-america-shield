@@ -1,2 +1,3 @@
-# challenge-css-captain-america-shield
-Captain America's shield with only CSS
+# Captain America's shield
+
+This was a challenge to create Captain America's shield using only CSS.
